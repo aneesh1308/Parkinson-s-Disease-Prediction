@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<!-- Navbar Start -->
+        {% include 'nav.html' %}
+
+	<!-- Navbar End -->
+
+	<!-- Page Header Start -->
+	<div class="container text-center py-5">
+		<h1 class="display-3 text-white text-uppercase mb-3 animated slideInDown">Voice Analysis</h1>
+	</div>
+
+	<!-- Page Header End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid py-5 w-100 align-self-end" src="{% static "img/voice-img.jpg" %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block bg-secondary text-primary py-1 px-4">About Us</p>
+                    <h1 class="text-uppercase mb-4">voice recognition technology. Learn More About Us!</h1>
+                    <p>In PD, the muscles used for speech may become weaker, leading to a softer, more monotone voice, a slower rate of speech, and difficulty with articulation. Voice recognition technology can help by accurately transcribing speech, making it easier for people with PD to communicate their thoughts and ideas.</p>
+                    <p class="mb-4">There are also specialized voice recognition software programs designed specifically for people with PD. These programs use algorithms to analyze the user's voice and provide feedback on how to improve their speech. </p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h3 class="text-uppercase mb-3"> track changes in a person's voice</h3>
+                            <p class="mb-0">voice recognition technology can be used to track changes in a person's voice over time, which can be useful for monitoring the progression of PD and for adjusting treatment plans.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="text-uppercase mb-3">improve communication</h3>
+                            <p class="mb-0">voice recognition technology has the potential to greatly improve communication and quality of life for people with PD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+	    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-secondary p-5">
+                        <p class="d-inline-block bg-dark text-primary py-1 px-4">Voice signal</p>
+                        <h1 class="text-uppercase mb-4">Voice Diagnosis</h1>
+                        <form method="post">
+                            {%  csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="a" placeholder="Your Name">
+                                        <label for="a">avg_freq MDVP:Fo(Hz)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="b" placeholder="Your Email">
+                                        <label for="b">max_fre MDVP:Fhi(Hz)</label>
+                                    </div>
+                                </div>
+	                             <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="c" placeholder="Your Email">
+                                        <label for="c">min_fre MDVP:Flo(Hz)</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="d" placeholder="Your Email">
+                                        <label for="d">var_fre1 MDVP:Jitter(%)</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="e" placeholder="Your Email">
+                                        <label for="e">var_fre2 MDVP:Jitter(Abs)</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="f" placeholder="Your Email">
+                                        <label for="f">var_fre3 MDVP:RAP</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="g" placeholder="Your Email">
+                                        <label for="g">var_fre4 MDVP:PPQ</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="h" placeholder="Your Email">
+                                        <label for="h">var_fre5 Jitter:DDP</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="k" placeholder="Your Email">
+                                        <label for="k">var_amp1 MDVP:Shimmer</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="l" placeholder="Your Email">
+                                        <label for="l">var_amp2 MDVP:Shimmer(dB)</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="m" placeholder="Your Email">
+                                        <label for="m">var_amp3 Shimmer:APQ3</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="n" placeholder="Your Email">
+                                        <label for="n">var_amp4 Shimmer:APQ5</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="o" placeholder="Your Email">
+                                        <label for="o">var_amp5 MDVP:APQ</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="p" placeholder="Your Email">
+                                        <label for="p">var_amp6 Shimmer:DDA</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="q" placeholder="Your Email">
+                                        <label for="q">NHR</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="r" placeholder="Your Email">
+                                        <label for="r">HNR</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="s" placeholder="Your Email">
+                                        <label for="s">RPDE</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="t" placeholder="Your Email">
+                                        <label for="t">DFA</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="u" placeholder="Your Email">
+                                        <label for="u">spread1</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="v" placeholder="Your Email">
+                                        <label for="v">spread2</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="w" placeholder="Your Email">
+                                        <label for="w">D2</label>
+                                    </div>
+                                </div>
+	                            <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" step="any" class="form-control bg-transparent" name="x" placeholder="Your Email">
+                                        <label for="x">PPE</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Predict</button>
+                                </div>
+                            </div>
+                        </form>
+                            {% if pred %}
+                                <h1 class="text-uppercase text-center px-4">{{ pred }} </h1>
+                            {% endif %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+	<!-- Testimonial Start -->
+	<div class=" container-xxl py-5
+							">
+		<div class="container">
+			<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+			     style="max-width: 600px;">
+				<p class="d-inline-block bg-secondary text-primary py-1 px-4">Also Like</p>
+				<h1 class="text-uppercase">Our Other Predictions!</h1>
+			</div>
+			<div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+				<div class="testimonial-item text-center"
+				     data-dot="<img class='img-fluid' src='{% static "img/mri -p.png" %}' alt=''>">
+					<h4 class="text-uppercase">MRI Scan</h4>
+					<p class="text-primary">Deep Learning Model</p>
+					<span class="fs-5">MRI scans are a valuable diagnostic tool that can help doctors detect and diagnose a wide range of conditions with high accuracy and without harmful exposure to ionizing radiation.</span>
+				</div>
+				<div class="testimonial-item text-center"
+				     data-dot="<img class='img-fluid' src='{% static "img/spiral-p.png" %}' alt=''>">
+					<h4 class="text-uppercase">Tremors</h4>
+					<p class="text-primary">Deep Learning Model</p>
+					<span class="fs-5">Parkinson's disease is a neurological disorder that can cause tremors in the hands, as well as stiffness, slow movements, and difficulty with balance and coordination.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Testimonial End -->
+
+
+	<a href="{% url 'index' %}" class="btn btn-primary btn-lg-square back-to-top"><i
+			class="bi bi-arrow-left"></i></a>
+
+{% endblock %}

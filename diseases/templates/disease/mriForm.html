@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Navbar Start -->
+    	{% include 'nav.html' %}
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white text-uppercase mb-3 animated slideInDown">MRI Scan</h1>
+        </div>
+    <!-- Page Header End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid  align-self-end" src="{% static "img/mri-img.jpg" %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block bg-secondary text-primary py-1 px-4">About Us</p>
+                    <h1 class="text-uppercase mb-4">Magnetic Resonance Imaging (MRI) Learn More About This!</h1>
+                    <p>MRI) is a medical imaging technique that uses a magnetic field and radio waves to create detailed images of the body's internal structures. MRI scans offer a number of benefits compared to other imaging techniques, such as X-rays or CT scans</p>
+                    <p class="mb-4">MRI scans are a valuable diagnostic tool that can help doctors detect and diagnose a wide range of conditions with high accuracy and without harmful exposure to ionizing radiation.</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h3 class="text-uppercase mb-3">Early Detection</h3>
+                            <p class="mb-0">MRI scans are often able to detect abnormalities earlier than other imaging techniques.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="text-uppercase mb-3">Multi-planar imaging</h3>
+                            <p class="mb-0"> MRI scans can produce images in multiple planes, making it easier for doctors to visualize complex structures like the brain, spine, and joints.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-primary py-1 px-4">MRI Service</p>
+                <h1 class="text-uppercase">Diagnose here</h1>
+            </div>
+            <div class="row g-4">
+	          <form action="" method="post" enctype="multipart/form-data">
+					{%  csrf_token %}
+					<div>
+					  <label for="formFileLg" class="form-label">MRI Scan Input </label>
+					  <input class="form-control text-center form-control-lg" id="formFileLg" name="upload" type="file">
+                        <input class="d-inline-block bg-secondary text-primary py-1 px-4" type="submit" name="submit">
+					</div>
+              </form>
+                {% if pred %}
+                 <h3 class="text-uppercase text-center px-4">{{ pred }}</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-primary py-1 px-4">Also Like</p>
+                <h1 class="text-uppercase">Our Other Predictions!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static "img/voice-message -p.png" %}' alt=''>">
+                    <h4 class="text-uppercase">Voice Analysis</h4>
+                    <p class="text-primary">Ml Model</p>
+                    <span class="fs-5">These programs use algorithms to analyze the user's voice and provide feedback on how to improve their speech.</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static "img/spiral-p.png" %}' alt=''>">
+                    <h4 class="text-uppercase">Tremors</h4>
+                    <p class="text-primary">Deep Learning Model</p>
+                    <span class="fs-5">Parkinson's disease is a neurological disorder that can cause tremors in the hands, as well as stiffness, slow movements, and difficulty with balance and coordination.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+
+
+
+	<a href="{% url 'index' %}" class="btn btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-left"></i></a>
+
+{% endblock %}
