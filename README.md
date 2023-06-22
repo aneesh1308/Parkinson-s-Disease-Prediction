@@ -1,8 +1,8 @@
-## Parkinson-s-Disease-Prediction
+# Parkinson-s-Disease-Prediction
 
 Parkinson's disease prediction using MRI scan, Spiral image and Voice data, with neural network and website deployment with django.
 
-# Introduction
+## Introduction
 
 -> Parkinson's disease is a neurodegenerative disorder that affects movement. 
 -> It is caused by the degeneration of dopamine-producing neurons in a region of the brain called the substantia nigra, which is responsible for controlling movement. 
@@ -11,16 +11,19 @@ Parkinson's disease prediction using MRI scan, Spiral image and Voice data, with
 -> Parkinson's disease is caused over the age of 50, but it can occur in younger individuals as well.
 -> There is currently no cure for Parkinson's disease, but treatments are available to help manage symptoms and improve quality of life.
 -> These may include medications, such as levodopa and dopamine agonists, as well as physical therapy and deep brain stimulation.
-# Objective
+
+## Objective
 
 The development of a deep learning model for Parkinson's disease diagnosis using MRI scans, spiral image and voice signal can have several benefits. 
 -> It can help improve the accuracy and efficiency of diagnosis, which can lead to earlier detection and treatment of the disease.
 -> It can provide valuable insights into the underlying biology of the disease and help identify new targets for treatment. 
 -> It can facilitate the development of personalized treatment plans for patients with Parkinson's disease
-# Architecture
+
+## Architecture
 
 <img width="480" alt="image" src="https://github.com/aneesh1308/Parkinson-s-Disease-Prediction/assets/82936701/8138a18c-04d1-433d-b0fe-4c900b96da90">
-# Modules Description
+
+## Modules Description
 
 Deep Learning Model Building:
 	Convolutional and pooling layers are often followed by fully linked layers in a model. Twenty layers and nodes altogether are adjusted. then the model is compiled by specifying the metrics "accuracy," the optimizer "adam," and the loss function "binary crossentropy." 500 epochs of iteration over the training data are used in the training procedure with early stopping.
@@ -33,7 +36,8 @@ Sequential Model Building For Tremors (CNN):
 
 Deployment:
 	Front-End Development: The front-end of the web application is developed using HTML, CSS, and JavaScript. 
-	Back-End Development: The back-end of the web application is developed using a web framework, such as Django or Flask. This includes creating a server, connecting to a                            database, and integrating the neural network model.
+	Back-End Development: The back-end of the web application is developed using a web framework, such as Django or Flask. This includes creating a server, connecting 
+                              to a database, and integrating the neural network model.
 	Model Integration: The trained neural network model is integrated into the web application by creating an API that allows users to input MRI scans and receive predictions.
 
 <img width="667" alt="image" src="https://github.com/aneesh1308/Parkinson-s-Disease-Prediction/assets/82936701/34204811-0e2f-4595-9bb1-32a667e36bcf">
@@ -42,7 +46,7 @@ Deployment:
 
 <img width="844" alt="image" src="https://github.com/aneesh1308/Parkinson-s-Disease-Prediction/assets/82936701/55c20555-c962-4c90-b249-5ccfc0795594">
 
-# Conclusion
+## Conclusion
 
 -> The project focuses on predicting Parkinson's disease using MRI scan and deep learning algorithms.
 -> The results show promising accuracy in predicting Parkinson's disease using MRI imaging data and deep learning.
